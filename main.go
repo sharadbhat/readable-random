@@ -70,9 +70,11 @@ func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
 			phrase = append([]string{adjectives[rand.Intn(adjCount)]}, phrase...)
 		}
 	} else {
+
 		if wordCount > 2 {
 			phrase = append([]string{adjectives[rand.Intn(adjCount)]}, phrase...)
 		}
+
 		if wordCount > 3 {
 			if isVowel(string(phrase[0][0])) {
 				article := []string{"an", "the"}[rand.Intn(2)]
@@ -82,6 +84,7 @@ func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
 				phrase = append([]string{article}, phrase...)
 			}
 		}
+
 		if wordCount > 4 {
 			phrase = append(phrase, "")
 			copy(phrase[3:], phrase[2:])
