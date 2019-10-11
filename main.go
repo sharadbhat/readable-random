@@ -3,6 +3,7 @@ package readable
 import (
 	"io/ioutil"
 	"math/rand"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -16,14 +17,14 @@ var (
 )
 
 func init() {
-	fileContent, err := ioutil.ReadFile("./words/adjectives.txt")
+	fileContent, err := ioutil.ReadFile(filepath.Join(".", "words", "adjectives.txt"))
 	if err != nil {
 		panic("adjectives.txt file not found")
 	}
 	adjectives = strings.Split(string(fileContent), " ")
 	adjCount = len(adjectives)
 
-	fileContent, err = ioutil.ReadFile("./words/nouns.txt")
+	fileContent, err = ioutil.ReadFile(filepath.Join(".", "words", "nouns.txt"))
 	if err != nil {
 		panic("nouns.txt file not found")
 	}
