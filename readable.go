@@ -58,7 +58,7 @@ func toTitleCase(wordList []string) []string {
 
 // GenerateSpecial generates random strings of custom length, custom separator and optional title casing.
 // Returns a string.
-func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
+func GenerateSpecial(titleCase bool, wordCount int, separator string) string {
 	if wordCount < 3 || wordCount > 10 {
 		panic("wordCount must be between 3 and 10")
 	}
@@ -94,7 +94,7 @@ func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
 		}
 	}
 
-	if capitalize {
+	if titleCase {
 		phrase = toTitleCase(phrase)
 	}
 
