@@ -23,7 +23,7 @@ import readable "github.com/sharadbhat/readable-random"
 To generate a random phrase,
 
 ```go
-phrase := readable.Generate() // Eg: ForgetfulHarshEgg
+phrase := readable.Generate() // Eg: ForgetfulEgg
 ```
 
 Also has a method to allow for custom word count, custom separator and optional title casing.
@@ -34,8 +34,10 @@ phrase := readable.GenerateSpecial(false, 4, "_") // Eg: a_purple_psychotic_anim
 
 ## Uses
 
-This can be used to add to the end of a URL.
+- This can be used to name and fetch user uploaded resources.
 
-Example: https://example.com/photos/ForgetfulHarshEgg
+  Example: https://example.com/photos/ForgetfulEgg
 
-For best results, use an wordCount value of 3, 4, or 5.
+- Container names.
+
+For best results, use a word count value of 2, 3, 4, or 5.
