@@ -1,4 +1,5 @@
-package random
+// Package readable provides an easy way to generate readable random phrases.
+package readable
 
 import (
 	"io/ioutil"
@@ -55,7 +56,8 @@ func toTitleCase(wordList []string) []string {
 	return titleCaseWordList
 }
 
-// GenerateSpecial ...
+// GenerateSpecial generates random strings of custom length, custom separator and optional title casing.
+// Returns a string.
 func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
 	if wordCount < 3 || wordCount > 10 {
 		panic("wordCount must be between 3 and 10")
@@ -99,7 +101,8 @@ func GenerateSpecial(capitalize bool, wordCount int, separator string) string {
 	return strings.Join(phrase, separator)
 }
 
-// Generate ...
+// Generate generates a readable random phrase of 3 words, each capitalized and no separator.
+// Returns a string.
 func Generate() string {
 	return GenerateSpecial(true, 3, "")
 }
