@@ -1,4 +1,4 @@
-package readable
+package random
 
 import (
 	"io/ioutil"
