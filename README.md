@@ -2,7 +2,9 @@
 
 A Go package to generate readable random phrase.
 
-[GitHub repository](https://github.com/sharadbhat/readable-random)
+[GitHub Repository](https://github.com/sharadbhat/readable-random)
+
+[![GoDoc](https://godoc.org/github.com/sharadbhat/readable-random?status.svg)](https://godoc.org/github.com/sharadbhat/readable-random)
 
 ## Get started
 
