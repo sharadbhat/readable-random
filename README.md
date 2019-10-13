@@ -1,10 +1,11 @@
 # readable-random
 
+[![GoDoc](https://godoc.org/github.com/sharadbhat/readable-random?status.svg)](https://godoc.org/github.com/sharadbhat/readable-random)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sharadbhat/readable-random)](https://goreportcard.com/report/github.com/sharadbhat/readable-random)
+
 A Go package to generate readable random phrase.
 
 [GitHub Repository](https://github.com/sharadbhat/readable-random)
-
-[![GoDoc](https://godoc.org/github.com/sharadbhat/readable-random?status.svg)](https://godoc.org/github.com/sharadbhat/readable-random)
 
 ## Get started
 
