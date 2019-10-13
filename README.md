@@ -26,17 +26,25 @@ To generate a random phrase,
 phrase := readable.Generate() // Eg: ForgetfulEgg
 ```
 
-Also has a method to allow for custom word count, custom separator and optional title casing.
+Has a method to allow for custom word count, custom separator and optional title casing.
 
 ```go
 phrase := readable.GenerateSpecial(false, 4, "_") // Eg: a_purple_psychotic_animal
+```
+
+Also has methods to return single adjective or noun.
+
+```go
+adjective := readable.Adjective() // Eg: absurd
+
+noun := readable.Noun() // Eg: opinion
 ```
 
 ## Uses
 
 - This can be used to name and fetch user uploaded resources.
 
-  Example: https://example.com/photos/ForgetfulEgg
+  Example: `https://example.com/photos/ForgetfulEgg`
 
 - Container names.
 

@@ -56,6 +56,18 @@ func toTitleCase(wordList []string) []string {
 	return titleCaseWordList
 }
 
+// Adjective returns a single adjective.
+// Returns a string.
+func Adjective() string {
+	return adjectives[rand.Intn(adjCount)]
+}
+
+// Noun returns a single noun.
+// Returns a string.
+func Noun() string {
+	return nouns[rand.Intn(nounCount)]
+}
+
 // GenerateSpecial generates random strings of custom length, custom separator and optional title casing.
 // Returns a string.
 func GenerateSpecial(titleCase bool, wordCount int, separator string) string {
@@ -64,17 +76,17 @@ func GenerateSpecial(titleCase bool, wordCount int, separator string) string {
 	}
 
 	var phrase []string
-	phrase = append(phrase, adjectives[rand.Intn(adjCount)])
-	phrase = append(phrase, nouns[rand.Intn(nounCount)])
+	phrase = append(phrase, Adjective())
+	phrase = append(phrase, Noun())
 
 	if wordCount > 5 {
 		for i := 0; i < wordCount-2; i++ {
-			phrase = append([]string{adjectives[rand.Intn(adjCount)]}, phrase...)
+			phrase = append([]string{Adjective()}, phrase...)
 		}
 	} else {
 
 		if wordCount > 2 {
-			phrase = append([]string{adjectives[rand.Intn(adjCount)]}, phrase...)
+			phrase = append([]string{Adjective()}, phrase...)
 		}
 
 		if wordCount > 3 {
